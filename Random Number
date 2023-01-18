@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random number generator</title>
+</head>
+  <style>
+    div{
+      outline-style: solid;
+      width: 200px;
+    }
+    .div2{
+    align-items: center;
+    margin-left: 10px;
+    outline-style: none;
+    padding: 10px;
+    }
+
+   .input{
+    border-radius: 100px;
+    width: 20px;
+    height: 20px;
+   }
+  </style>
+<body>
+  
+  <!-------form page---->
+  <div>
+     <div class="div2">
+      Number 1:  <input type="text" id="random1" name="number" class="input"><br><br>
+      Number 2:   <input type="text" id="random2" name="number" class="input"><br><br>
+      Number 3: <input type="text" id="random3" name="number" class="input"><br><br>
+      
+      <input type="button" value="Play" id="play" name="play" onclick="play()" >
+      <input type="button" value="Reset" id="reset" name="reset" onclick="reset()">
+     </div>
+  </div>
+</body>
+  <script>
+    function play(){
+      let number1=Math.floor(Math.random()*20)+1;
+      let number2=Math.floor(Math.random()*20)+1;
+      let number3=Math.floor(Math.random()*20)+1;
+      document.getElementById("random1").value=number1;
+      document.getElementById("random2").value=number2;
+      document.getElementById("random3").value=number3;
+    }
+    play();
+
+    //function on reset.
+     function reset(){
+      document.getElementById("random1").value="";
+      document.getElementById("random2").value="";
+      document.getElementById("random3").value="";
+     }
+    //giving the tags functionality.
+
+  </script>
+</html>
